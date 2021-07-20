@@ -20,5 +20,5 @@ import streamlit as st
 #day=df["DAY_OF_WEEK"].value_counts()
 #day_percentages=(day/ (df["DAY_OF_WEEK"].count()))
 #st.pie(top_crime)
-st.button('Harder Daddy')
-streamlit run first_app.py
+#st.button('Harder Daddy')
+st run first_app.py
