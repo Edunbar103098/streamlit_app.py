@@ -26,12 +26,13 @@ if page == "Gun Violence By District":
     link = '[District Pie Chart](https://github.com/Edunbar103098/streamlit_app.py/blob/main/District%20Pie%20Chart)'
     st.markdown(link, unsafe_allow_html=True)          
 elif page == "Deadly Days":
+    st.image("https://i.pinimg.com/originals/5a/0a/66/5a0a667714f3604dc4b8ae85b1de25d5.jpg")
     st.header('Chance of Crime on Any Given Day in Boston')
     day=df["DAY_OF_WEEK"].value_counts()
     day_percentages=(day/70)
     st.write(day_percentages)
-    st.image("https://i.pinimg.com/originals/5a/0a/66/5a0a667714f3604dc4b8ae85b1de25d5.jpg")
     hour=df["HOUR"].value_counts()
+    st.header('Crime by the Hour')
     st.bar_chart(hour)
     st.text("As seen by the data above, Thursday and Friday have high crime percentages")
     st.text("To keep yourself safe, here are some alternatives to going out on Thursdays and Fridays:")
