@@ -12,6 +12,10 @@ if page == "Gun Violence":
 elif page == "Deadly Days":
     day=df["DAY_OF_WEEK"].value_counts()
     st.write(day)
-#elif page == "Top Crimes":
+elif page == "Top Crimes":
+    all = df["OFFENSE_DESCRIPTION"].value_counts()
+    top_crime = all.head(n=10)
+    chances_of_crime= (top_crime / (df["OFFENSE_DESCRIPTION"].count()))
+    st.write(chances_of_crime) 
 
 
