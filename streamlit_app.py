@@ -53,12 +53,21 @@ elif page == "Top Crimes":
     if crime == "Investigate Person":
         st.header('Locations of Investigating People in Boston')
         st.image('https://i.pinimg.com/564x/82/5a/a2/825aa2a607ef383b18661aeb3a98a405.jpg')
+        if st.button('Try This Code Yourself!'):
+          link = '[Investigation Chart](https://github.com/Edunbar103098/streamlit_app.py/blob/main/INVESTIGATE%20PERSON)'
+          st.markdown(link, unsafe_allow_html=True)
     elif crime == 'Sick Assist':
         st.header('Locations of Sick Assists Crimes in Boston')
         st.image('https://i.pinimg.com/564x/b2/cc/33/b2cc33bc6f054aa9b522dfd5f751b940.jpg')
+        if st.button('Try This Code Yourself!'):
+          link = '[Sick Assist](https://github.com/Edunbar103098/streamlit_app.py/blob/main/SICK%20ASSIST)'
+          st.markdown(link, unsafe_allow_html=True)
     elif crime == 'M/V - Leaving Scene- Property Damage':
         st.header('Locations of M/V Property Damage Crimes in Boston')
         st.image('https://i.pinimg.com/564x/33/fe/cc/33feccee0dce431d337cf4c35c157659.jpg')
+        if st.button('Try This Code Yourself!'):
+          link = '[Sick Assist](https://github.com/Edunbar103098/streamlit_app.py/blob/main/MV)'
+          st.markdown(link, unsafe_allow_html=True)
     if st.button('Go to The Boston Police Homepage'):
       link = '[City of Boston](https://www.boston.gov/departments/police)'  
       st.markdown(link, unsafe_allow_html=True)    
