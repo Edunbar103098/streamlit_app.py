@@ -40,7 +40,6 @@ elif page == "Deadly Days":
       st.markdown(link1, unsafe_allow_html=True)  
     if st.button('Safe Option 2'): 
      link2 = '[Disney +](https://www.disneyplus.com/)'
-        st.markdown(link1, unsafe_allow_html=True)
       st.markdown(link, unsafe_allow_html=True) 
 elif page == "Top Crimes":
     all = df["OFFENSE_DESCRIPTION"].value_counts()
