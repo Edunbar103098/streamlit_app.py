@@ -65,7 +65,7 @@ elif page == "Top Crimes":
     st.image('https://massbaymovers.com/wp-content/uploads/2021/01/Boston-MA-Crime-Rate.jpg')
     all = df["OFFENSE_DESCRIPTION"].value_counts()
     top_crime = all.head(n=3)
-    st.area_chart(top_crime)
+    st.area_chart(all)
     st.header('Top 3 Crimes in Boston')
     st.write(top_crime)
     crime = st.selectbox("Pick a Crime", ['Investigate Person', 'Sick Assist', 'M/V - Leaving Scene- Property Damage'])
