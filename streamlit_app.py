@@ -35,11 +35,12 @@ elif page == "Deadly Days":
     st.bar_chart(hour)
     st.text("As seen by the data above, it is not the weekend when most crimes are committed, but the days leading up.")
     st.text("To keep yourself safe, here are some alternatives to going out on Thursdays and Fridays:")
-    if st.button('Safe Options'):
+    if st.button('Safe Option 1'):
       link1 = '[Netflix](https://www.netflix.com/)'  
-      link2 = '[Disney +](https://www.disneyplus.com/)'
-      st.markdown(link1,link2,  unsafe_allow_html=True)    
-
+      st.markdown(link1, unsafe_allow_html=True)  
+    if st.button('Safe Option 2'): 
+     link2 = '[Disney +](https://www.disneyplus.com/)'
+        st.markdown(link1, unsafe_allow_html=True)
       st.markdown(link, unsafe_allow_html=True) 
 elif page == "Top Crimes":
     all = df["OFFENSE_DESCRIPTION"].value_counts()
