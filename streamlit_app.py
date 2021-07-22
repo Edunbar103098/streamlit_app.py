@@ -30,7 +30,7 @@ if page == "Gun Violence By District":
     st.markdown(link, unsafe_allow_html=True)           
 elif page == "Deadly Days":
     day=df["DAY_OF_WEEK"].value_counts()
-    day_percentages=(day/700)
+    day_percentages=(day/70)
     st.write(day_percentages)
     st.bar_chart(day)
 elif page == "Top Crimes":
