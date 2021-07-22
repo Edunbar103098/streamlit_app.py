@@ -17,15 +17,8 @@ elif page == "Top Crimes":
     all = df["OFFENSE_DESCRIPTION"].value_counts()
     top_crime = all.head(n=10)
     chances_of_crime= ((top_crime*100) / (df["OFFENSE_DESCRIPTION"].count()))
-    st.write(chances_of_crime)
-    with st.echo(code_location='below'):
-      import matplotlib.pyplot as plt
-
-      fig = plt.figure()
-      ax = fig.add_subplot(1,1,1)
-
-      ax.pie(chances_of_crime)
-
-      st.write(fig)
+    labels = 'Frogs', 'Hogs', 'Dogs', 'Logs'
+    sizes = [15, 30, 45, 10]
+    explode = (0, 0.1, 0, 0)  #
 
 
