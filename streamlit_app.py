@@ -14,7 +14,7 @@ if page == "Gun Violence By District":
   st.image('https://i.pinimg.com/474x/84/37/cb/8437cb1783e45dffa657c3b11897b7aa.jpg')
   if st.button('See Code to Create this Chart:'):
       st.text("#import pandas as pd, #import matplotlib.pyplot as plt, # import descartes,# import geopandas as gpd, # from shapely.geometry import Point, Polygon")
-      st.text("pd.set_option('display.max_rows',7000),street_map = gpd.read_file(r'C:\Users\Dunbar_Edwa\PycharmProjects\Boston Project\City_of_Boston_Boundary.shp')'"
+      st.text("pd.set_option('display.max_rows',7000),street_map = gpd.read_file(r'C:\Users\Dunbar_Edwa\PycharmProjects\Boston Project\City_of_Boston_Boundary.shp')")
       st.text("# fig,ax = plt.subplots(figsize = (15,15))")
       st.text("# df = pd.read_csv("boston.csv")'")
       st.text("# crs = {'init': 'epsg:4326'}")
