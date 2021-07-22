@@ -15,7 +15,7 @@ if page == "Gun Violence By District":
     explode = [0.5,0,0,0,0,0,0,0,0,0,0,0,0]
     plt.pie(shooting, labels= mylabels, explode= explode)
     plt.legend()
-    plt.show()
+    st.pyplot()
     link = '[City of Boston](https://www.boston.gov/departments/police)'
     st.markdown(link, unsafe_allow_html=True)           
 elif page == "Deadly Days":
