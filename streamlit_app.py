@@ -21,11 +21,11 @@ if page == "Gun Violence By District":
   st.write(shooting)
   st.header('Representation Of Crime by District')
   st.image('https://i.pinimg.com/474x/dc/8e/3a/dc8e3a106cb1688df7f07e900ad158c4.jpg')
-  st.header('Gun Violence on the Rise During the Pandemic')
-  st.video('https://youtu.be/-OuII9QsdkI')
   if st.button('See Code to Create this Pie Chart:'):
     link = '[District Pie Chart](https://github.com/Edunbar103098/streamlit_app.py/blob/main/District%20Pie%20Chart)'
-    st.markdown(link, unsafe_allow_html=True)          
+    st.markdown(link, unsafe_allow_html=True)
+  st.header('Gun Violence on the Rise During the Pandemic')
+  st.video('https://youtu.be/-OuII9QsdkI')        
 elif page == "Deadly Days":
     st.image("https://i.pinimg.com/originals/5a/0a/66/5a0a667714f3604dc4b8ae85b1de25d5.jpg")
     st.header('Chance of Crime on Any Given Day in Boston')
