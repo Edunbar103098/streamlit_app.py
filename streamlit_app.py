@@ -10,10 +10,10 @@ if page == "Gun Violence":
     link = '[City of Boston](https://www.boston.gov/departments/police)'
     st.markdown(link, unsafe_allow_html=True)           
 elif page == "Deadly Days":
-    df1 = df.drop(columns = ['INCIDENT_NUMBER','OFFENSE_CODE','OFFENSE_CODE_GROUP','DISTRICT','REPORTING_AREA','SHOOTING','OCCURRED_ON_DATE','YEAR','MONTH','DAY_OF_WEEK','HOUR','UCR_PART','Location'])
+    df1 = df.drop(columns = ['INCIDENT_NUMBER','OFFENSE_CODE','STREET','OFFENSE_DESCRIPTION','OFFENSE_CODE_GROUP','DISTRICT','REPORTING_AREA','SHOOTING','OCCURRED_ON_DATE','YEAR','MONTH','DAY_OF_WEEK','HOUR','UCR_PART','Location'])
     day=df["DAY_OF_WEEK"].value_counts()
     st.write(day)
-    st.area_chart(day)
+    st.map(df1)
 elif page == "Top Crimes":
     all = df["OFFENSE_DESCRIPTION"].value_counts()
     top_crime = all.head(n=10)
