@@ -1,7 +1,6 @@
 import altair as alt
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 import csv
 df = pd.read_csv('https://raw.githubusercontent.com/Edunbar103098/streamlit_app.py/16786d8ea3dd570730347dabbecf5c8cc367a8fe/boston.csv')
 page = st.selectbox("Choose your Tab", ["Gun Violence", "Deadly Days", "Top Crimes"]) 
