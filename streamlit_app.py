@@ -9,7 +9,7 @@ st.subheader('By: Edward Dunbar')
 page = st.selectbox("Statistics", ["Gun Violence By District", "Deadly Days", "Top Crimes"]) 
 if page == "Gun Violence By District":
   st.header('Gun Violence on the Rise During the Pandemic')
-  st.video(https://youtu.be/-OuII9QsdkI)
+  st.video('https://youtu.be/-OuII9QsdkI')
   st.header('Gun Violence Vs Non Gun Violence, With District Crime Backdrop')
   st.subheader('Black: Non Gun Violence')
   st.subheader('Red: Gun Violence')
