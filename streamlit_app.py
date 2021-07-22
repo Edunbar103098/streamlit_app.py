@@ -36,5 +36,7 @@ elif page == "Top Crimes":
     all = df["OFFENSE_DESCRIPTION"].value_counts()
     top_crime = all.head(n=10)
     st.write(top_crime)
-    
+    if st.button('Listen Live:'):
+      link = '[Live Coverage of Boston Police Radio](https://www.broadcastify.com/listen/feed/35233)'
+      st.markdown(link, unsafe_allow_html=True)    
 
