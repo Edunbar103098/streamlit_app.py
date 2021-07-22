@@ -6,6 +6,7 @@ df = pd.read_csv('https://raw.githubusercontent.com/Edunbar103098/streamlit_app.
 page = st.selectbox("Choose your Tab", ["Gun Violence", "Deadly Days", "Top Crimes"]) 
 if page == "Gun Violence":
   if st.button('Go to The Boston Police Homepage'):
+    st.image('https://github.com/Edunbar103098/streamlit_app.py/blob/main/Shootings.JPG')
     link = '[City of Boston](https://www.boston.gov/departments/police)'
     st.markdown(link, unsafe_allow_html=True)           
 #elif page == "Deadly Days":
