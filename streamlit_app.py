@@ -9,8 +9,9 @@ if page == "Gun Violence":
     st.image('https://github.com/Edunbar103098/streamlit_app.py/blob/main/Shootings.JPG')
     link = '[City of Boston](https://www.boston.gov/departments/police)'
     st.markdown(link, unsafe_allow_html=True)           
-#elif page == "Deadly Days":
-    # Display details of page 2
+elif page == "Deadly Days":
+    day=df["DAY_OF_WEEK"].value_counts()
+    print(day)
 #elif page == "Top Crimes":
 
 
