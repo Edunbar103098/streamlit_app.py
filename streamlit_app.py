@@ -6,10 +6,16 @@ df = pd.read_csv('https://raw.githubusercontent.com/Edunbar103098/streamlit_app.
 st.image('https://www.ctvnews.ca/polopoly_fs/1.2386301.1613680608!/httpImage/image.jpg_gen/derivatives/landscape_1020/image.jpg')
 st.header('Boston Crime Statistics')
 st.subheader('By: Edward Dunbar')
-page = st.selectbox("Statistics", ["Gun Violence", "Deadly Days", "Top Crimes"]) 
-if page == "Gun Violence":
+page = st.selectbox("Statistics", ["Gun Violence By District", "Deadly Days", "Top Crimes"]) 
+if page == "Gun Violence By District":
   if st.button('Go to The Boston Police Homepage'):
-    
+    import matplotlib.pyplot as plt
+    shooting = df["DISTRICT"].value_counts()
+    mylabels= ['B2','C11','D4','A1','B3','C6','D14','E13','E18','A7','E5','A15','External']
+    explode = [0.5,0,0,0,0,0,0,0,0,0,0,0,0]
+    plt.pie(shooting, labels= mylabels, explode= explode)
+    plt.legend()
+    plt.show()
     link = '[City of Boston](https://www.boston.gov/departments/police)'
     st.markdown(link, unsafe_allow_html=True)           
 elif page == "Deadly Days":
