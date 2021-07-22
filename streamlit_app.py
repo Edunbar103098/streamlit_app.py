@@ -15,7 +15,7 @@ elif page == "Deadly Days":
 elif page == "Top Crimes":
     all = df["OFFENSE_DESCRIPTION"].value_counts()
     top_crime = all.head(n=10)
-    chances_of_crime= (top_crime / (df["OFFENSE_DESCRIPTION"].count()))
+    chances_of_crime= ((top_crime*100) / (df["OFFENSE_DESCRIPTION"].count()))
     st.write(chances_of_crime) 
 
 
