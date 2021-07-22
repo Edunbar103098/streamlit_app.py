@@ -1,3 +1,18 @@
+"""
+Name: Edward Dunbar
+CS602: SN2
+Data: Boston Crime Data
+URL: https://share.streamlit.io/edunbar103098/streamlit_app.py/main
+Description: This program desribes multiple analysis of aspects of crime in Boston. The first tab
+discusses the prevalence of gun violence in crimes commited around the city, and how many involved a firearm.
+I proceed to do a geopandas reverse geolocation to show an outline of the city itself, with districts as a backdrop.
+In wake of the COVID-19 pandemic, gun violence rose in the city, so I provided a video for people to view about it.
+My second page discusses the days in which crime is most prevalent in the city, and provides a graph to show hourly data of crime.
+I then proceeded to make a comment about these days, and provide links to people of alternatives of going out and being involved in a crime.
+My third page discusses the top crimes in the city, with the 50 most prevalent in an area chart. I proceed to present a chart of the top 3 crimes.
+Below that is a tab that allows for users to see where these tabs occur in the city itself.
+Finally, there is a link below that allows users to go directly to the BPD website for more information.
+"""
 import streamlit as st
 import pandas as pd
 import csv
@@ -6,7 +21,11 @@ st.sidebar.image('https://www.ctvnews.ca/polopoly_fs/1.2386301.1613680608!/httpI
 
 st.sidebar.header('Boston Crime Statistics')
 st.sidebar.subheader('By: Edward Dunbar')
+if st.sidebar.button('Go to the source of this website):
+  link = '[Website Source](https://github.com/Edunbar103098/streamlit_app.py/tree/main)'
+  st.markdown(link, unsafe_allow_html=True)
 page = st.sidebar.selectbox("Statistics", ["Gun Violence By District", "Deadly Days", "Top Crimes"]) 
+#function I used to properly display the header for each section
 def header(page):
   if page == "Gun Violence By District":
     st.header("Gun Violence By District")
@@ -14,7 +33,7 @@ def header(page):
     st.header("Deadly Days")
   elif page == "Top Crimes":
     st.header("Top Crimes")
-  
+#this is the massive if function I used to have multiple pages for my project  
 if page == "Gun Violence By District":
   header(page)
   st.image('https://media-cldnry.s-nbcnews.com/image/upload/newscms/2021_15/3464361/210413-infrastructure-policing-2x1-cs.jpg')
@@ -27,6 +46,8 @@ if page == "Gun Violence By District":
     st.markdown(link, unsafe_allow_html=True)
   st.header('Total Crime By District')
   shooting = df["DISTRICT"].value_counts()
+  #this list creation was used to create a new dataframe with the labels of every district and number of crimes in that district, by combining my own list of 
+  #districts, then making it into a dictionary from a list i created with the for loop present below, which provided the numbers.
   list= []
   mylabels= ['B2','C11','D4','A1','B3','C6','D14','E13','E18','A7','E5','A15','External']
   for x in shooting:
@@ -71,6 +92,7 @@ elif page == "Top Crimes":
     st.header('Top 3 Crimes in Boston')
     st.write(top_crime)
     crime = st.selectbox("Pick a Crime", ['Investigate Person', 'Sick Assist', 'M/V - Leaving Scene- Property Damage'])
+    #This provided the major if function to pull up the geopandas graphs by attack, and providing the link to the code used to make these charts.
     if crime == "Investigate Person":
         st.header('Locations of Investigating People in Boston')
         st.image('https://i.pinimg.com/564x/82/5a/a2/825aa2a607ef383b18661aeb3a98a405.jpg')
