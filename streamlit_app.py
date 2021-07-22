@@ -31,7 +31,7 @@ if page == "Gun Violence By District":
 elif page == "Deadly Days":
     day=df["DAY_OF_WEEK"].value_counts()
     day_percentages=(day/700)
-    st.write(day)
+    st.write(day_percentages)
     st.bar_chart(day)
 elif page == "Top Crimes":
     all = df["OFFENSE_DESCRIPTION"].value_counts()
