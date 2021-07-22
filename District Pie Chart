@@ -1,4 +1,9 @@
-shooting = df["DISTRICT"].value_counts()
+import csv
+import pandas as pd
+import matplotlib.pyplot as plt
+import plotly.express as px
+import pprint
+df = pd.read_csv("boston.csv")shooting = df["DISTRICT"].value_counts()
 
 mylabels= ['B2','C11','D4','A1','B3','C6','D14','E13','E18','A7','E5','A15','External']
 explode = [0.5,0,0,0,0,0,0,0,0,0,0,0,0]
