@@ -66,7 +66,7 @@ elif page == "Top Crimes":
         st.header('Locations of M/V Property Damage Crimes in Boston')
         st.image('https://i.pinimg.com/564x/33/fe/cc/33feccee0dce431d337cf4c35c157659.jpg')
         if st.button('Try This Code Yourself!'):
-          link = '[Sick Assist](https://github.com/Edunbar103098/streamlit_app.py/blob/main/MV)'
+          link = '[M/V Damage](https://github.com/Edunbar103098/streamlit_app.py/blob/main/MV)'
           st.markdown(link, unsafe_allow_html=True)
     if st.button('Go to The Boston Police Homepage'):
       link = '[City of Boston](https://www.boston.gov/departments/police)'  
