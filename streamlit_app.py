@@ -66,6 +66,7 @@ elif page == "Top Crimes":
     all = df["OFFENSE_DESCRIPTION"].value_counts()
     top_crime = all.head(n=3)
     crimes= all.head(n=25)
+    st.header("50 Most Prevalent Crimes in Boston")
     st.area_chart(crimes)
     st.header('Top 3 Crimes in Boston')
     st.write(top_crime)
