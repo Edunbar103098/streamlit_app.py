@@ -37,7 +37,7 @@ def header(page):
 if page == "Gun Violence By District":
   header(page)
   st.image('https://media-cldnry.s-nbcnews.com/image/upload/newscms/2021_15/3464361/210413-infrastructure-policing-2x1-cs.jpg')
-  st.header('Gun Violence Vs Non Gun Violence, With District Crime Backdrop')
+  st.header('Gun Violence Vs Non Gun Violence Related Crimes')
   st.subheader('Black Dots: Non Gun Violence')
   st.subheader('Red Dots: Gun Violence')
   st.image('https://i.pinimg.com/474x/84/37/cb/8437cb1783e45dffa657c3b11897b7aa.jpg')
