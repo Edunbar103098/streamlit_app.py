@@ -6,7 +6,6 @@ st.sidebar.image('https://www.ctvnews.ca/polopoly_fs/1.2386301.1613680608!/httpI
 
 st.sidebar.header('Boston Crime Statistics')
 st.sidebar.subheader('By: Edward Dunbar')
-st.beta_color_picker('Pick a Color')
 page = st.sidebar.selectbox("Statistics", ["Gun Violence By District", "Deadly Days", "Top Crimes"]) 
 if page == "Gun Violence By District":
   st.header('Gun Violence on the Rise During the Pandemic')
