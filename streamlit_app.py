@@ -12,7 +12,7 @@ def header(page):
     st.header("Gun Violence By District")
   elif page == "Deadly Days":
     st.header("Deadly Days")
-  elif page == "Top Crimes"
+  elif page == "Top Crimes":
     st.header("Top Crimes")
   
 if page == "Gun Violence By District":
