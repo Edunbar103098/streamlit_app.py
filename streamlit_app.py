@@ -8,7 +8,7 @@ st.header('Boston Crime Statistics')
 st.subheader('By: Edward Dunbar')
 page = st.selectbox("Statistics", ["Gun Violence By District", "Deadly Days", "Top Crimes"]) 
 if page == "Gun Violence By District":
-  if st.button('Go to The Boston Police Homepage')
+  if st.button('Go to The Boston Police Homepage'):
     link = '[City of Boston](https://www.boston.gov/departments/police)'
     st.markdown(link, unsafe_allow_html=True)           
 elif page == "Deadly Days":
