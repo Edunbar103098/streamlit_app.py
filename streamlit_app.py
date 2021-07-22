@@ -44,10 +44,9 @@ elif page == "Deadly Days":
      st.markdown(link2, unsafe_allow_html=True) 
 elif page == "Top Crimes":
     all = df["OFFENSE_DESCRIPTION"].value_counts()
-    top_crime = all.head(n=10)
+    top_crime = all.head(n=3)
     st.write(top_crime)
-    if st.button('Listen Live:'):
-      link = '[Live Coverage of Boston Police Radio](https://www.broadcastify.com/listen/feed/35233)'
+    st.selectbox("Pick a Crime", ['Option 1', 'Option 2', 'Option 3'])
     if st.button('Go to The Boston Police Homepage'):
       link = '[City of Boston](https://www.boston.gov/departments/police)'  
       st.markdown(link, unsafe_allow_html=True)    
