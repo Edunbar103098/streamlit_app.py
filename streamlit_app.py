@@ -18,7 +18,7 @@ elif page == "Top Crimes":
     top_crime = all.head(n=10)
     chances_of_crime= ((top_crime*100) / (df["OFFENSE_DESCRIPTION"].count()))
     st.write(chances_of_crime)
-    plt.pie(chances_of_crime)
-    st.plt.show()
+    a = plt.pie(chances_of_crime)
+    st.write(a)
 
 
