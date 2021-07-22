@@ -1,1 +1,8 @@
+shooting = df["DISTRICT"].value_counts()
+
+mylabels= ['B2','C11','D4','A1','B3','C6','D14','E13','E18','A7','E5','A15','External']
+explode = [0.5,0,0,0,0,0,0,0,0,0,0,0,0]
+plt.pie(shooting, labels= mylabels, explode= explode)
+plt.legend()
+plt.show()
 
