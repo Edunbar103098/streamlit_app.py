@@ -12,14 +12,17 @@ if page == "Gun Violence By District":
   st.subheader('Black: Non Gun Violence')
   st.subheader('Red: Gun Violence')
   st.image('https://i.pinimg.com/474x/84/37/cb/8437cb1783e45dffa657c3b11897b7aa.jpg')
-    if st.button('See Code to Create this Chart:'):
+  if st.button('See Code to Create this Geo Chart:'):
     link = '[Geopandas Chart](https://github.com/Edunbar103098/streamlit_app.py/blob/main/geopandas)'
     st.markdown(link, unsafe_allow_html=True)
   st.header('Total Crime By District')
   shooting = df["DISTRICT"].value_counts()
   st.write(shooting)
   st.header('Representation Of Crime by District')
-  st.image('https://i.pinimg.com/474x/dc/8e/3a/dc8e3a106cb1688df7f07e900ad158c4.jpg')  
+  st.image('https://i.pinimg.com/474x/dc/8e/3a/dc8e3a106cb1688df7f07e900ad158c4.jpg') 
+  if st.button('See Code to Create this Pie Chart:'):
+    link = '[District Pie Chart](https://github.com/Edunbar103098/streamlit_app.py/blob/main/District%20Pie%20Chart)'
+    st.markdown(link, unsafe_allow_html=True)
   if st.button('Go to The Boston Police Homepage'):
     link = '[City of Boston](https://www.boston.gov/departments/police)'
     st.markdown(link, unsafe_allow_html=True)           
