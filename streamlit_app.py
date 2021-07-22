@@ -21,7 +21,7 @@ st.sidebar.image('https://www.ctvnews.ca/polopoly_fs/1.2386301.1613680608!/httpI
 
 st.sidebar.header('Boston Crime Statistics')
 st.sidebar.subheader('By: Edward Dunbar')
-if st.sidebar.button('Go to the source of this website):
+if st.sidebar.button('Go to the source of this website'):
   link = '[Website Source](https://github.com/Edunbar103098/streamlit_app.py/tree/main)'
   st.markdown(link, unsafe_allow_html=True)
 page = st.sidebar.selectbox("Statistics", ["Gun Violence By District", "Deadly Days", "Top Crimes"]) 
