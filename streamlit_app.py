@@ -16,4 +16,5 @@ elif page == "Top Crimes":
     all = df["OFFENSE_DESCRIPTION"].value_counts()
     top_crime = all.head(n=10)
     st.write(top_crime)
+    st.bar_chart(top_crime)
 
