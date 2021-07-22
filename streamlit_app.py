@@ -29,6 +29,7 @@ if page == "Gun Violence By District":
     link = '[City of Boston](https://www.boston.gov/departments/police)'
     st.markdown(link, unsafe_allow_html=True)           
 elif page == "Deadly Days":
+    st.header('Chance of Crime on Any Given Day in Boston')
     day=df["DAY_OF_WEEK"].value_counts()
     day_percentages=(day/70)
     st.write(day_percentages)
