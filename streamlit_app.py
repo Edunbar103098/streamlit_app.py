@@ -7,7 +7,16 @@ st.sidebar.image('https://www.ctvnews.ca/polopoly_fs/1.2386301.1613680608!/httpI
 st.sidebar.header('Boston Crime Statistics')
 st.sidebar.subheader('By: Edward Dunbar')
 page = st.sidebar.selectbox("Statistics", ["Gun Violence By District", "Deadly Days", "Top Crimes"]) 
+def header(page):
+  if page == "Gun Violence By District":
+    st.header("Gun Violence By District")
+  elif page == "Deadly Days":
+    st.header("Deadly Days")
+  elif page == "Top Crimes"
+    st.header("Top Crimes")
+  
 if page == "Gun Violence By District":
+  header()
   st.image('https://media-cldnry.s-nbcnews.com/image/upload/newscms/2021_15/3464361/210413-infrastructure-policing-2x1-cs.jpg')
   st.header('Gun Violence Vs Non Gun Violence, With District Crime Backdrop')
   st.subheader('Black Dots: Non Gun Violence')
