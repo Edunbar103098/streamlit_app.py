@@ -14,6 +14,8 @@ if page == "Gun Violence By District":
   st.image('https://i.pinimg.com/474x/84/37/cb/8437cb1783e45dffa657c3b11897b7aa.jpg')
   st.header('Total Crime By District')
   shooting = df["DISTRICT"].value_counts()
+  st.header('Representation Of Crime by District')
+  st.image('https://i.pinimg.com/474x/dc/8e/3a/dc8e3a106cb1688df7f07e900ad158c4.jpg')
   st.write(shooting)
   if st.button('See Code to Create this Chart:'):
     link = '[Geopandas Chart](https://github.com/Edunbar103098/streamlit_app.py/blob/main/geopandas)'
