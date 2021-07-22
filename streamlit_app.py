@@ -33,8 +33,8 @@ elif page == "Deadly Days":
     st.image("https://i.pinimg.com/originals/5a/0a/66/5a0a667714f3604dc4b8ae85b1de25d5.jpg")
     hour=df["HOUR"].value_counts()
     st.bar_chart(hour)
-    st.text("As seen by the data above, it is not the weekend when most crimes are committed, but the days leading up.)
-    st.text("To keep yourself safe, here are some alternatives to going out on Thursdays and Fridays')
+    st.text("As seen by the data above, it is not the weekend when most crimes are committed, but the days leading up.")
+    st.text("To keep yourself safe, here are some alternatives to going out on Thursdays and Fridays:")
     if st.button('Safe Options'):
       link1 = '[Netflix](https://www.netflix.com/)'  
       link2 = '[Disney +](https://www.disneyplus.com/)'
