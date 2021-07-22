@@ -1,4 +1,9 @@
 import streamlit as st
-st.sidebar.radio('Make a Selection', [1,2,3,4])
-
+ 
+page = st.selectbox("Choose your Tab", ["Gun Violence", "Deadly Days", "Top Crimes"]) 
+#if page == "Gun Violence":
+    # Display details of page 1
+#elif page == "Deadly Days":
+    # Display details of page 2
+#elif page == "Top Crimes":
 
