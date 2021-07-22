@@ -18,7 +18,14 @@ elif page == "Top Crimes":
     top_crime = all.head(n=10)
     chances_of_crime= ((top_crime*100) / (df["OFFENSE_DESCRIPTION"].count()))
     st.write(chances_of_crime)
-    a = plt.pie(chances_of_crime)
-    st.write(a)
+    with st.echo(code_location='below'):
+      import matplotlib.pyplot as plt
+
+      fig = plt.figure()
+      ax = fig.add_subplot(1,1,1)
+
+      ax.pie(chances_of_crime)
+
+      st.write(fig)
 
 
