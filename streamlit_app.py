@@ -16,9 +16,5 @@ elif page == "Deadly Days":
 elif page == "Top Crimes":
     all = df["OFFENSE_DESCRIPTION"].value_counts()
     top_crime = all.head(n=10)
-    chances_of_crime= ((top_crime*100) / (df["OFFENSE_DESCRIPTION"].count()))
-    labels = 'Frogs', 'Hogs', 'Dogs', 'Logs'
-    sizes = [15, 30, 45, 10]
-    explode = (0, 0.1, 0, 0)  #
-
+    st.write(top_crime)
 
