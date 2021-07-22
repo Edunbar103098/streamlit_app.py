@@ -24,16 +24,16 @@ if page == "Gun Violence By District":
   st.image('https://i.pinimg.com/474x/dc/8e/3a/dc8e3a106cb1688df7f07e900ad158c4.jpg') 
   if st.button('See Code to Create this Pie Chart:'):
     link = '[District Pie Chart](https://github.com/Edunbar103098/streamlit_app.py/blob/main/District%20Pie%20Chart)'
-    st.markdown(link, unsafe_allow_html=True)
-  if st.button('Go to The Boston Police Homepage'):
-    link = '[City of Boston](https://www.boston.gov/departments/police)'
-    st.markdown(link, unsafe_allow_html=True)           
+    st.markdown(link, unsafe_allow_html=True)          
 elif page == "Deadly Days":
     st.header('Chance of Crime on Any Given Day in Boston')
     day=df["DAY_OF_WEEK"].value_counts()
     day_percentages=(day/70)
     st.write(day_percentages)
     st.bar_chart(day)
+    if st.button('Go to The Boston Police Homepage'):
+      link = '[City of Boston](https://www.boston.gov/departments/police)'
+      st.markdown(link, unsafe_allow_html=True) 
 elif page == "Top Crimes":
     all = df["OFFENSE_DESCRIPTION"].value_counts()
     top_crime = all.head(n=10)
