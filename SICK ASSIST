@@ -21,7 +21,7 @@ geo_df1 = geo_df.loc[geo_df["Lat"] > 0]
 
 fig.ax = plt.subplots(figsize = (30,30))
 street_map.plot(ax = ax, alpha = .4, color = 'grey')
-geo_df1[geo_df1['OFFENSE_DESCRIPTION'] == 'SICK ASSIST'].plot(ax = ax, markersize = 20, color = 'red', marker ='.', label = 'No shooting')
+geo_df1[geo_df1['OFFENSE_DESCRIPTION'] == 'SICK ASSIST'].plot(ax = ax, markersize = 20, color = 'red', marker ='.')
 geo_df1[geo_df1['DISTRICT'] == 'B2'].plot(ax = ax, markersize = 200, color = 'grey',alpha = .01, marker ='o')
 geo_df1[geo_df1['DISTRICT'] == 'B3'].plot(ax = ax, markersize = 200, color = 'grey',alpha = .01,  marker ='o')
 geo_df1[geo_df1['DISTRICT'] == 'C11'].plot(ax = ax, markersize = 200, color = 'grey',alpha = .01, marker ='o')
