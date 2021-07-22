@@ -18,7 +18,14 @@ if page == "Gun Violence By District":
     st.markdown(link, unsafe_allow_html=True)
   st.header('Total Crime By District')
   shooting = df["DISTRICT"].value_counts()
-  st.write(shooting)
+  list= []
+  mylabels= ['B2','C11','D4','A1','B3','C6','D14','E13','E18','A7','E5','A15','External']
+  for x in shooting:
+     if x not in list:
+         list.append(x)
+  district_totals = {mylabels[i]: list[i] for i in range(len(mylabels))}
+  districtdf= pd.DataFrame(district_totals.items(), columns=["District Name", "Total Crime in That District"])
+  st.write(districtdf)
   st.header('Representation Of Crime by District')
   st.image('https://i.pinimg.com/474x/dc/8e/3a/dc8e3a106cb1688df7f07e900ad158c4.jpg')
   if st.button('See Code to Create this Pie Chart:'):
