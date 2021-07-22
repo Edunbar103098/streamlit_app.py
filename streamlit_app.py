@@ -12,6 +12,8 @@ if page == "Gun Violence":
 elif page == "Deadly Days":
     df1 = df.drop(columns = ['INCIDENT_NUMBER','OFFENSE_CODE','STREET','OFFENSE_DESCRIPTION','OFFENSE_CODE_GROUP','DISTRICT','REPORTING_AREA','SHOOTING','OCCURRED_ON_DATE','YEAR','MONTH','DAY_OF_WEEK','HOUR','UCR_PART','Location'])
     day=df["DAY_OF_WEEK"].value_counts()
+    df2= df.rename(columns={"Lat":"lat"})
+    df3=df2.rename(columns={"Long":"long"}-
     st.write(day)
     st.map(df1)
 elif page == "Top Crimes":
