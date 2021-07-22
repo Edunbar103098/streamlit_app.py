@@ -43,6 +43,7 @@ elif page == "Deadly Days":
      link2 = '[Disney +](https://www.disneyplus.com/)'
      st.markdown(link2, unsafe_allow_html=True) 
 elif page == "Top Crimes":
+    st.image('https://massbaymovers.com/wp-content/uploads/2021/01/Boston-MA-Crime-Rate.jpg')
     all = df["OFFENSE_DESCRIPTION"].value_counts()
     top_crime = all.head(n=3)
     st.write(top_crime)
