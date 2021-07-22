@@ -15,7 +15,7 @@ elif page == "Deadly Days":
     df2= df.rename(columns={"Lat":"lat"})
     df3=df2.rename(columns={"Long":"long"}-
     st.write(day)
-    st.map(df3)
+    st.alt(df3, use_container_width=True)
 elif page == "Top Crimes":
     all = df["OFFENSE_DESCRIPTION"].value_counts()
     top_crime = all.head(n=10)
