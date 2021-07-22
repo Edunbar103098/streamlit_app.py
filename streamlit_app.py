@@ -1,6 +1,7 @@
 import altair as alt
 import streamlit as st
 import pandas as pd
+import matplotlib as plt
 import csv
 df = pd.read_csv('https://raw.githubusercontent.com/Edunbar103098/streamlit_app.py/16786d8ea3dd570730347dabbecf5c8cc367a8fe/boston.csv')
 page = st.selectbox("Choose your Tab", ["Gun Violence", "Deadly Days", "Top Crimes"]) 
@@ -16,6 +17,8 @@ elif page == "Top Crimes":
     all = df["OFFENSE_DESCRIPTION"].value_counts()
     top_crime = all.head(n=10)
     chances_of_crime= ((top_crime*100) / (df["OFFENSE_DESCRIPTION"].count()))
-    st.write(chances_of_crime) 
+    st.write(chances_of_crime)
+    plt.pie(chances_of_crime)
+    st.plt.show()
 
 
