@@ -26,7 +26,7 @@ if page == "Gun Violence By District":
     link = '[District Pie Chart](https://github.com/Edunbar103098/streamlit_app.py/blob/main/District%20Pie%20Chart)'
     st.markdown(link, unsafe_allow_html=True)          
 elif page == "Deadly Days":
-    st.image("blob:https://www.pinterest.com/4e24228e-993a-4cb9-95c1-b6763b13f131")
+    st.image("https://i.pinimg.com/originals/5a/0a/66/5a0a667714f3604dc4b8ae85b1de25d5.jpg")
     st.header('Chance of Crime on Any Given Day in Boston')
     day=df["DAY_OF_WEEK"].value_counts()
     day_percentages=(day/70)
