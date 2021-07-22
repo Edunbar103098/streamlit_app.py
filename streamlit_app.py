@@ -43,6 +43,7 @@ if page == "Gun Violence By District":
   st.header('Gun Violence on the Rise During the Pandemic')
   st.video('https://youtu.be/-OuII9QsdkI')        
 elif page == "Deadly Days":
+    header(page)
     st.image("https://i.pinimg.com/originals/5a/0a/66/5a0a667714f3604dc4b8ae85b1de25d5.jpg")
     st.header('Chance of Crime on Any Given Day in Boston')
     day=df["DAY_OF_WEEK"].value_counts()
@@ -60,6 +61,7 @@ elif page == "Deadly Days":
      link2 = '[Disney +](https://www.disneyplus.com/)'
      st.markdown(link2, unsafe_allow_html=True) 
 elif page == "Top Crimes":
+    header(page)
     st.image('https://massbaymovers.com/wp-content/uploads/2021/01/Boston-MA-Crime-Rate.jpg')
     all = df["OFFENSE_DESCRIPTION"].value_counts()
     top_crime = all.head(n=3)
