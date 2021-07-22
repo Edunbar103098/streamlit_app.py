@@ -11,7 +11,7 @@ if page == "Gun Violence":
     st.markdown(link, unsafe_allow_html=True)           
 elif page == "Deadly Days":
     day=df["DAY_OF_WEEK"].value_counts()
-    print(day)
+    st.write(day)
 #elif page == "Top Crimes":
 
 
