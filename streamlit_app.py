@@ -31,9 +31,15 @@ elif page == "Deadly Days":
     day_percentages=(day/70)
     st.write(day_percentages)
     st.image("https://i.pinimg.com/originals/5a/0a/66/5a0a667714f3604dc4b8ae85b1de25d5.jpg")
-    st.bar_chart(day)
-    if st.button('Go to The Boston Police Homepage'):
-      link = '[City of Boston](https://www.boston.gov/departments/police)'
+    hour=df["HOUR"].value_counts()
+    st.bar_chart(hour)
+    st.text("As seen by the data above, it is not the weekend when most crimes are committed, but the days leading up.)
+    st.text("To keep yourself safe, here are some alternatives to going out on Thursdays and Fridays')
+    if st.button('Safe Options'):
+      link1 = '[Netflix](https://www.netflix.com/)'  
+      link2 = '[Disney +](https://www.disneyplus.com/)'
+      st.markdown(link1,link2,  unsafe_allow_html=True)    
+
       st.markdown(link, unsafe_allow_html=True) 
 elif page == "Top Crimes":
     all = df["OFFENSE_DESCRIPTION"].value_counts()
@@ -41,5 +47,7 @@ elif page == "Top Crimes":
     st.write(top_crime)
     if st.button('Listen Live:'):
       link = '[Live Coverage of Boston Police Radio](https://www.broadcastify.com/listen/feed/35233)'
+    if st.button('Go to The Boston Police Homepage'):
+      link = '[City of Boston](https://www.boston.gov/departments/police)'  
       st.markdown(link, unsafe_allow_html=True)    
 
